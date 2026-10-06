@@ -25,7 +25,7 @@ dialog{border:1px solid var(--line);border-radius:18px;padding:30px 24px;backgro
 .result-screen{min-height:100svh;display:flex;flex-direction:column;justify-content:center}.result-screen .track{margin-top:0}.result-loading{margin-top:28px}.result-loading h1{font-size:25px}.result-loading p{font-size:15px;color:var(--muted);margin-top:12px}.result-progress-label{display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin:22px 0 8px}.result-progress{height:13px;border-radius:12px;background:#eeeef0;overflow:hidden}.result-progress-fill{height:100%;width:0;background:#ff5b0a;border-radius:inherit}.result-final{display:none}.result-final.ready{display:block}.result-final h1{font-size:30px;margin-top:18px}.result-final h1 span{color:#12a64d}.result-final .match-card{border:1px solid #d7d7d7;border-radius:16px;padding:18px 16px;margin:22px 0}.score-ring{width:126px;height:126px;border:14px solid #14a850;border-right-color:#edf0ee;border-radius:50%;display:grid;place-items:center;margin:0 auto 16px;font-weight:800;font-size:22px}.result-final .match-card h2{font-size:22px;line-height:1.1}.result-final .match-card p{font-size:14px;color:var(--muted);margin-top:12px;line-height:1.45}.result-final .success-title{font-size:26px;color:#ff5b0a;margin-top:22px}.result-final .success-subtitle{font-size:16px;font-weight:700;margin-top:12px}.claim{margin-top:23px!important;background:#14a850;border-color:#14a850;box-shadow:0 5px 0 #0d8840}.claim:hover:enabled{background:#108b43;border-color:#108b43}
 </style>
 <style>.score-ring{--score:0%;border:0;background:conic-gradient(#14a850 var(--score),#edf0ee 0);position:relative}.score-ring:after{content:'';position:absolute;inset:14px;background:#fff;border-radius:50%}.score-ring span{position:relative;z-index:1}</style>
-<style>.score-ring:before{content:'94%';position:absolute;z-index:2;color:var(--ink);font-size:22px;font-weight:800}</style>
+<style>.score-ring span{position:relative;z-index:2;color:var(--ink);font-size:22px;font-weight:800}</style>
 <style>.result-progress-fill{background:var(--accent)}.result-screen .fill{background:var(--accent)}</style>
 <style>.profile-photo{width:100%;aspect-ratio:1.55;overflow:hidden;border-radius:18px;margin:24px 0 10px}.profile-photo img{width:100%;height:100%;object-fit:cover;object-position:center}.profile-note{background:#fff5f0;border:1px solid #ffc8b5;border-radius:16px;padding:14px 16px;font-size:14px;line-height:1.45}.profile-note strong{color:#12a64d}.profile .success-title{margin-top:20px}</style>
 <style>.profile-photo{aspect-ratio:1.12}.profile-photo img{object-position:center top}</style>
@@ -115,7 +115,7 @@ dialog{border:1px solid var(--line);border-radius:18px;padding:30px 24px;backgro
 </fieldset></form>
 </section>
 <section class="screen flow" id="experience" aria-labelledby="experience-title" hidden>
- 
+
 <div class="track" aria-hidden="true"><div class="fill" style="width:90%"></div></div>
 <h1 class="flow-heading" id="experience-title" tabindex="-1">¿Qué nivel de experiencia tienes creando piezas con limpiapipas?</h1>
 <form id="experience-form"><fieldset class="age-options situation-options"><legend class="sr-only">Selecciona tu nivel de experiencia con limpiapipas</legend>
@@ -160,7 +160,7 @@ dialog{border:1px solid var(--line);border-radius:18px;padding:30px 24px;backgro
 <section class="screen flow result-screen" id="result" aria-labelledby="result-title" hidden>
 <div class="track" aria-hidden="true"><div class="fill" id="result-top-fill" style="width:94%"></div></div>
 <div class="result-loading" id="result-loading"><h1 id="result-loading-title">Cargando tus respuestas… ⏳</h1><div class="result-progress-label"><span>¡Creando un entrenamiento exclusivo para ti!</span><span id="result-percent">0%</span></div><div class="result-progress"><div class="result-progress-fill" id="result-progress-fill"></div></div><p>¡Espera solo un momento!</p></div>
-<div class="result-final" id="result-final"><h1 id="result-title">¡Wow! 🫶</h1><p>¡Qué orgullo decir esto: alcanzaste un <strong>94%</strong> de compatibilidad con el perfil ideal para recibir la beca de 6 meses para estudiar en <span>Arte con Limpiapipas!</span> 🎉</p><div class="match-card"><div class="score-ring">94%</div><h2>¡Sí, <span>94%</span>!<br>¡Fuiste increíble! 🥳</h2><p>El mínimo necesario era <strong>87%</strong>, ¡y fuiste mucho más allá!</p></div><h2 class="success-title">¡Tienes todo lo que buscamos!</h2><p class="success-subtitle">Estamos muy felices de verte llegar hasta aquí. 🎉</p><button class="primary claim" id="claim">¡Sí, quiero reclamar mi beca!</button></div>
+<div class="result-final" id="result-final"><h1 id="result-title">¡Wow! 🫶</h1><p>¡Qué orgullo decir esto: alcanzaste un <strong>94%</strong> de compatibilidad con el perfil ideal para recibir la beca de 6 meses para estudiar en <span>Arte con Limpiapipas!</span> 🎉</p><div class="match-card"><div class="score-ring" role="progressbar" aria-label="Compatibilidad" aria-valuemin="0" aria-valuemax="94" aria-valuenow="0"><span id="score-percent">0%</span></div><h2>¡Sí, <span>94%</span>!<br>¡Fuiste increíble! 🥳</h2><p>El mínimo necesario era <strong>87%</strong>, ¡y fuiste mucho más allá!</p></div><h2 class="success-title">¡Tienes todo lo que buscamos!</h2><p class="success-subtitle">Estamos muy felices de verte llegar hasta aquí. 🎉</p><button class="primary claim" id="claim">¡Sí, quiero reclamar mi beca!</button></div>
 </section>
 <section class="screen flow" id="support" aria-labelledby="support-title" hidden>
 <div class="track" aria-hidden="true"><div class="fill" style="width:99%"></div></div>
@@ -191,10 +191,18 @@ let advanceTimer = 0;
 let selectionComplete = false;
 const answers = {age:null,children:null,occupation:null,situation:null,experience:null,dream:null,lifeStage:null,content:null,course:null,support:null};
 let resultFrame = 0;
+let scoreFrame = 0;
+function animateScoreRing(){
+ cancelAnimationFrame(scoreFrame);
+ const ring=document.querySelector('.score-ring');const label=$('score-percent');const started=performance.now();const duration=2400;
+ ring.style.setProperty('--score','0%');ring.setAttribute('aria-valuenow','0');label.textContent='0%';
+ function draw(now){const progress=Math.min(1,(now-started)/duration);const eased=1-Math.pow(1-progress,3);const pct=Math.min(94,Math.round(eased*94));ring.style.setProperty('--score',pct+'%');ring.setAttribute('aria-valuenow',String(pct));label.textContent=pct+'%';if(progress<1)scoreFrame=requestAnimationFrame(draw);}
+ scoreFrame=requestAnimationFrame(draw);
+}
 function prepareResult(){
- cancelAnimationFrame(resultFrame);$('result-loading').style.display='block';$('result-final').classList.remove('ready');$('result-progress-fill').style.width='0%';$('result-percent').textContent='0%';
+ cancelAnimationFrame(resultFrame);cancelAnimationFrame(scoreFrame);$('result-loading').style.display='block';$('result-final').classList.remove('ready');$('result-progress-fill').style.width='0%';$('result-percent').textContent='0%';const ring=document.querySelector('.score-ring');ring.style.setProperty('--score','0%');ring.setAttribute('aria-valuenow','0');$('score-percent').textContent='0%';
  const started=performance.now();
- function tick(now){const pct=Math.min(94,Math.floor((now-started)/42));$('result-progress-fill').style.width=pct+'%';$('result-percent').textContent=pct+'%';document.querySelector('.score-ring').style.setProperty('--score',pct+'%');if(pct<94)resultFrame=requestAnimationFrame(tick);else{$('result-loading').style.display='none';$('result-final').classList.add('ready');}}
+ function tick(now){const pct=Math.min(94,Math.floor((now-started)/42));$('result-progress-fill').style.width=pct+'%';$('result-percent').textContent=pct+'%';if(pct<94)resultFrame=requestAnimationFrame(tick);else{$('result-loading').style.display='none';$('result-final').classList.add('ready');animateScoreRing();}}
  resultFrame=requestAnimationFrame(tick);
 }
 function updateProgress(percent) {
