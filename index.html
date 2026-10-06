@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Arte que Rinde · Manualidades desde casa</title>
+<meta name="description" content="Descubre las manualidades con limpiapipas. Responde unas preguntas sencillas para comenzar.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237443c4'/%3E%3Ctext x='8' y='24' font-family='Arial' font-weight='bold' font-size='24' fill='white'%3Em%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light;--paper:#fff;--ink:#292434;--muted:#746e7b;--accent:#7443c4;--line:#eae5f0;--tint:#f7f2fe;font-family:Arial,Helvetica,sans-serif}
+*{box-sizing:border-box}html{background:var(--paper);-webkit-text-size-adjust:100%;text-size-adjust:100%}body{margin:0;color:var(--ink);background:var(--paper)}button,input{font:inherit}button,input,label{-webkit-tap-highlight-color:transparent}button{touch-action:manipulation;cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:5px}button:disabled{cursor:default}[hidden]{display:none!important}img{display:block;max-width:100%}h1,h2,p,figure{margin:0}
+.brand-logo{position:fixed;z-index:20;top:max(14px,env(safe-area-inset-top));left:max(16px,env(safe-area-inset-left));font-size:16px;font-weight:800;letter-spacing:-.4px;color:var(--ink);pointer-events:none}.brand-logo::first-letter{color:var(--accent)}.screen{background:#fff;width:100%;max-width:540px;margin:auto;padding:calc(58px + env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) calc(30px + env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left));text-align:center;animation:enter .3s ease both}
+.welcome{min-height:100svh;display:flex;flex-direction:column;justify-content:center}.hero,.intro{display:flex;flex-direction:column;align-items:stretch;width:100%}.eyebrow{color:var(--accent);font-size:16px;font-weight:700;letter-spacing:.3px;margin-bottom:22px}h1{font-size:clamp(34px,8.6vw,44px);font-weight:750;line-height:1.12;letter-spacing:-1.5px;text-wrap:balance}h1 span{color:var(--accent)}.description{font-size:16px;line-height:1.55;color:var(--muted);max-width:350px;margin:17px auto 0}.hero-photo{position:relative;aspect-ratio:1.7;overflow:hidden;border-radius:18px;margin:25px 0 24px;background:#fff}.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center}.primary{width:100%;min-height:58px;padding:17px 20px;border:1px solid var(--accent);border-radius:14px;background:var(--accent);color:#fff;font-size:16px;font-weight:700;transition:background .15s,transform .15s}.primary:hover:enabled{background:#6033ab;border-color:#6033ab}.primary:active:enabled{transform:scale(.985)}.primary:disabled{background:#eeeaf2;border-color:#eeeaf2;color:#88808f}.hint{font-size:13px;color:var(--muted);line-height:1.5;margin-top:12px}
+.flow-top{display:flex;justify-content:center;margin-bottom:19px}.back{border:0;background:none;color:var(--muted);min-height:44px;padding:8px 20px;font-size:14px}.back:hover{color:var(--accent)}.progress-row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;font-weight:600;margin-bottom:10px}.track{height:7px;background:#f1eaf9;border-radius:9px;overflow:hidden}.fill{height:100%;width:0;background:var(--accent);border-radius:inherit}.flow-heading{font-size:clamp(28px,7.3vw,36px);line-height:1.15;letter-spacing:-1px;margin-top:30px}.flow-description{font-size:16px;line-height:1.5;color:var(--muted);margin-top:12px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:27px;align-items:stretch}.selection-card{min-width:0;display:flex;flex-direction:column;align-items:center;overflow:hidden;border:1px solid #ffbab4;border-radius:15px;background:#ffe2dc;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .4s,transform .4s}.selection-card:nth-child(2){background:#fff8da;border-color:#ffda70}.selection-card:nth-child(3){background:#f0fbdc;border-color:#b6e984}.selection-card.revealed{opacity:1;visibility:visible;transform:none}.card-image{position:relative;width:100%;aspect-ratio:216/165;overflow:hidden;flex-shrink:0}.card-image img{position:absolute;max-width:none;height:auto;width:103.24%;left:-2.31%;top:-5.46%}.validating img{width:105.55%;left:-2.78%;top:-5.46%}.released img{width:138.89%;left:-5.1%;top:0}.selection-card figcaption{width:100%;padding:5px 7px 17px;font-size:clamp(14px,3.6vw,17px);font-weight:700;line-height:1.3;text-align:center;overflow-wrap:normal}.selection-result{margin-top:28px;opacity:0;visibility:hidden;transition:opacity .3s}.selection-result.ready{opacity:1;visibility:visible}.selection-result h2{font-size:24px;letter-spacing:-.6px}.selection-info{font-size:16px;color:var(--muted);line-height:1.5;max-width:330px;margin:12px auto 23px}
+.age-options{border:0;padding:0;margin:27px 0 0;display:grid;gap:11px;min-width:0}.age-option{position:relative;display:flex;justify-content:center;align-items:center;min-height:64px;padding:16px 48px;border:1px solid #e1dce7;border-radius:14px;cursor:pointer;background:#fff;transition:background .15s,border-color .15s}.age-option:hover{border-color:#b7a2d7}.age-option:has(input:checked){background:var(--tint);border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.age-option input{appearance:none;position:absolute;left:18px;width:22px;height:22px;border:1.5px solid #c4b9d1;border-radius:50%;margin:0;display:grid;place-content:center;background:#fff}.age-option input:checked{border-color:var(--accent)}.age-option input:checked:after{content:'';width:10px;height:10px;background:var(--accent);border-radius:50%}.age-option span{font-size:17px;font-weight:600}.age-action{margin-top:24px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+dialog{border:1px solid var(--line);border-radius:18px;padding:30px 24px;background:#fff;color:var(--ink);max-width:400px;width:calc(100% - 36px);text-align:center;box-shadow:0 20px 80px #0002}dialog::backdrop{background:#29243480}dialog h2{font-size:25px;letter-spacing:-.7px}dialog p{font-size:16px;line-height:1.5;color:var(--muted);margin:16px 0 24px}
+@keyframes enter{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@media(max-width:360px){.screen{padding-left:16px;padding-right:16px}.cards{gap:7px}.selection-card{border-radius:12px}.selection-card figcaption{padding:5px 4px 14px;font-size:14px}.eyebrow{margin-bottom:18px}.hero-photo{margin-top:22px}.flow-heading{font-size:28px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+.family-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.family-photo{width:100%;aspect-ratio:4/5;border-radius:18px;overflow:hidden;margin-top:23px}.family-photo img{width:100%;height:100%;object-fit:cover;object-position:center center}.family-options .age-option{padding:18px 36px;min-height:66px}.family-options .age-option input{left:14px}.family-action{margin-top:23px}
+.situation-options .age-option{min-height:78px}.situation-options .age-option span{font-size:16px;line-height:1.45;overflow-wrap:break-word}
+.age-photo{width:100%;margin-top:23px;border-radius:18px;overflow:hidden}.age-photo img{width:100%;height:auto;display:block}
+.result-screen{min-height:100svh;display:flex;flex-direction:column;justify-content:center}.result-screen .track{margin-top:0}.result-loading{margin-top:28px}.result-loading h1{font-size:25px}.result-loading p{font-size:15px;color:var(--muted);margin-top:12px}.result-progress-label{display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin:22px 0 8px}.result-progress{height:13px;border-radius:12px;background:#eeeef0;overflow:hidden}.result-progress-fill{height:100%;width:0;background:#ff5b0a;border-radius:inherit}.result-final{display:none}.result-final.ready{display:block}.result-final h1{font-size:30px;margin-top:18px}.result-final h1 span{color:#12a64d}.result-final .match-card{border:1px solid #d7d7d7;border-radius:16px;padding:18px 16px;margin:22px 0}.score-ring{width:126px;height:126px;border:14px solid #14a850;border-right-color:#edf0ee;border-radius:50%;display:grid;place-items:center;margin:0 auto 16px;font-weight:800;font-size:22px}.result-final .match-card h2{font-size:22px;line-height:1.1}.result-final .match-card p{font-size:14px;color:var(--muted);margin-top:12px;line-height:1.45}.result-final .success-title{font-size:26px;color:#ff5b0a;margin-top:22px}.result-final .success-subtitle{font-size:16px;font-weight:700;margin-top:12px}.claim{margin-top:23px!important;background:#14a850;border-color:#14a850;box-shadow:0 5px 0 #0d8840}.claim:hover:enabled{background:#108b43;border-color:#108b43}
+</style>
+<style>.score-ring{--score:0%;border:0;background:conic-gradient(#14a850 var(--score),#edf0ee 0);position:relative}.score-ring:after{content:'';position:absolute;inset:14px;background:#fff;border-radius:50%}.score-ring span{position:relative;z-index:1}</style>
+<style>.score-ring:before{content:'94%';position:absolute;z-index:2;color:var(--ink);font-size:22px;font-weight:800}</style>
+<style>.result-progress-fill{background:var(--accent)}.result-screen .fill{background:var(--accent)}</style>
+<style>.profile-photo{width:100%;aspect-ratio:1.55;overflow:hidden;border-radius:18px;margin:24px 0 10px}.profile-photo img{width:100%;height:100%;object-fit:cover;object-position:center}.profile-note{background:#fff5f0;border:1px solid #ffc8b5;border-radius:16px;padding:14px 16px;font-size:14px;line-height:1.45}.profile-note strong{color:#12a64d}.profile .success-title{margin-top:20px}</style>
+<style>.profile-photo{aspect-ratio:1.12}.profile-photo img{object-position:center top}</style>
+<style>.video-note{margin-top:22px;background:#e9f8ed;border:1px solid #9be5ae;border-radius:16px;padding:14px 16px;font-size:15px;line-height:1.45}.video-warning{margin-top:22px;background:#fff0e9;border:1px solid #ffc0ad;border-radius:16px;padding:18px 16px}.warning-icon{font-size:26px}.video-warning h2{color:#e22d32;font-size:29px;margin:7px 0 15px}.video-warning p{font-size:14px;line-height:1.45;margin:8px 0}.video-warning p b{background:#e22d32;color:#fff;padding:2px 5px}.video-warning u{font-weight:800}</style>
+<style>.vls-player{position:relative;width:100%;aspect-ratio:9/14;max-height:650px;overflow:hidden;border-radius:18px;background:#292434;margin:10px auto 0}.vls-player img{width:100%;height:100%;object-fit:cover;object-position:center}.vls-overlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 18px;border-radius:10px;background:#7443c4e8;color:#fff;min-width:140px}.vls-overlay span{font-size:12px}.vls-overlay strong{font-size:28px}.vls-overlay small{font-size:11px}.vls-caption{position:absolute;left:18px;right:18px;bottom:20px;color:#fff;font-size:15px;font-weight:700;text-shadow:0 2px 4px #000}.vls-play{position:absolute;right:14px;bottom:14px;width:42px;height:42px;min-height:42px;border:1px solid #ffffff80;border-radius:50%;background:#292434b8;color:#fff}</style>
+<style>.secure-footer-image{display:block;width:100%;max-width:420px;height:auto;margin:24px auto 0;border-radius:12px}</style>
+<style>.vls-audio{display:block;width:100%;margin:14px auto 0;accent-color:var(--accent)}.vls-audio::-webkit-media-controls-panel{background:#f3eefb}</style>
+</head>
+<body>
+<main><div class="brand-logo" aria-label="Arte que Rinde">Arte que Rinde</div>
+<section class="screen welcome" id="welcome" aria-labelledby="title">
+<div class="hero"><div class="intro"><div class="hero-copy"><p class="eyebrow">Arte que Rinde</p><h1 id="title">Crea algo bonito.<br><span>Empieza por ti.</span></h1><p class="description">Responde unas preguntas sencillas y descubre cómo empezar a crear desde casa.</p></div><figure class="hero-photo"><img src="assets/creacion.png" alt="Mujer creando artesanías coloridas" width="1536" height="1024" fetchpriority="high"></figure><div class="hero-action"><button class="primary" id="start">COMENZAR</button></div></div></div>
+</section>
+<section class="screen flow vls-screen" id="vls" aria-labelledby="vls-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:99%"></div></div>
+<h1 class="sr-only" id="vls-title">Video de presentación de la beca</h1>
+<div class="vls-player"><img src="assets/valeria.png" alt="Video de la profesora de arte con limpiapipas" width="1536" height="1024"><div class="vls-overlay"><span>Tu video está listo</span><strong>🔊</strong><small>Toca para escuchar</small></div><div class="vls-caption">Descubre tu beca de estudios de 6 meses</div><button class="vls-play" aria-label="Reproducir video">▶</button></div>
+<audio class="vls-audio" controls preload="metadata" aria-label="Narración de la VLS"><source src="assets/vls-narracao.mp3" type="audio/mpeg">Tu navegador no soporta audio.</audio>
+<img class="secure-footer-image" src="assets/secure-footer.png" alt="Sitio seguro y términos de uso" width="691" height="353">
+</section>
+<section class="screen flow result-screen" id="profile" aria-labelledby="profile-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:100%"></div></div>
+<h1 class="flow-heading" id="profile-title"><span>¡Tu beca de estudios de 6 meses</span> está garantizada! ✅</h1>
+<p class="flow-description">Y ahora que eres oficialmente mi alumna, déjame presentarme:</p>
+<figure class="profile-photo"><img src="assets/valeria.png" alt="Profesora de arte con limpiapipas" width="1536" height="1024"></figure>
+<div class="profile-note">💗 Me llamo <strong>Valeria Ríos</strong>, soy profesora de arte con limpiapipas hace más de 5 años. <b>Ya formé a más de 800 alumnas</b> y hoy comparto mi rutina y trabajo con más de 100 mil seguidoras en mi Instagram.</div>
+<h2 class="success-title">¡Ahora, vamos a activar tu beca de estudios! ⬇️</h2>
+<button class="primary claim" id="activate">Ver cómo activar mi beca</button>
+</section>
+<section class="screen flow result-screen" id="video" aria-labelledby="video-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:98%"></div></div>
+<h1 class="flow-heading" id="video-title">Ahora, haz clic abajo y <span>mira el video</span> donde explico todo lo que aprenderás en Arte con Limpiapipas.</h1>
+<div class="video-note">💗 También te muestro, paso a paso, cómo activar la <strong>beca de estudios de 6 meses</strong> que acabas de conquistar.</div>
+<div class="video-warning"><div class="warning-icon">🚨</div><h2>¡Pero atención!</h2><p><b>AVISO</b></p><p>Para no correr el riesgo de perder tu beca de estudios de 6 meses…</p><p>Es obligatorio que veas <u>hasta el final</u> el video que está en la siguiente página.</p></div>
+<button class="primary claim" id="watch-video">¡Activar mi beca de estudios ahora!</button>
+</section>
+<section class="screen flow" id="selection" aria-labelledby="selection-title" hidden>
+<div class="progress-row"><span id="progress-label">Preparando tu selección</span><span id="percentage" aria-hidden="true">0%</span></div><div class="track" id="progress" role="progressbar" aria-labelledby="progress-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="fill" id="progress-fill"></div></div>
+<h1 class="flow-heading" id="selection-title" tabindex="-1">Ya casi comenzamos</h1>
+<div class="cards">
+<figure class="selection-card" aria-hidden="true"><div class="card-image reserved"><img src="assets/acceso-reservado.png" alt="Acceso gratuito reservado" width="223" height="299"></div><figcaption aria-hidden="true">Acceso gratuito reservado</figcaption></figure>
+<figure class="selection-card" aria-hidden="true"><div class="card-image validating"><img src="assets/validando-perfil.png" alt="Validando perfil" width="228" height="292"></div><figcaption aria-hidden="true">Validando perfil</figcaption></figure>
+<figure class="selection-card" aria-hidden="true"><div class="card-image released"><img src="assets/acceso-liberado.png" alt="Acceso gratuito liberado" width="300" height="332"></div><figcaption aria-hidden="true">Acceso gratuito liberado</figcaption></figure>
+</div><p class="sr-only" id="loading-announcement" role="status" aria-live="polite"></p>
+<div class="selection-result" id="selection-result" aria-hidden="true"><h2>¡Listo para empezar!</h2><p class="selection-info">Cuéntanos un poco sobre ti para comenzar.</p><button class="primary" id="continue-selection">CONTINUAR</button></div>
+</section>
+<section class="screen flow" id="age" aria-labelledby="age-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:20%"></div></div>
+<h1 class="flow-heading age-heading" id="age-title" tabindex="-1">¿Cuántos años tienes?</h1><p class="flow-description">Selecciona tu rango de edad.</p>
+<form id="age-form"><fieldset class="age-options"><legend class="sr-only">¿Cuántos años tienes?</legend>
+<label class="age-option"><input type="radio" name="age" value="18-34" required><span>18 a 34 años</span></label>
+<label class="age-option"><input type="radio" name="age" value="35-54"><span>35 a 54 años</span></label>
+<label class="age-option"><input type="radio" name="age" value="55-64"><span>55 a 64 años</span></label>
+<label class="age-option"><input type="radio" name="age" value="65-plus"><span>65 años o más</span></label>
+</fieldset></form>
+<figure class="age-photo"><img src="assets/mujeres-artesanas.png" alt="Cuatro mujeres de distintas edades creando flores de limpiapipas juntas" width="1536" height="1024"></figure>
+</section>
+<section class="screen flow" id="family" aria-labelledby="family-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:40%"></div></div>
+<h1 class="flow-heading" id="family-title" tabindex="-1">¿Tienes hijos?</h1>
+<form id="family-form"><fieldset class="age-options family-options"><legend class="sr-only">¿Tienes hijos?</legend>
+<label class="age-option"><input type="radio" name="children" value="yes" required><span>Sí</span><b aria-hidden="true">👍</b></label>
+<label class="age-option"><input type="radio" name="children" value="no"><span>No</span><b aria-hidden="true">👎</b></label>
+</fieldset>
+<figure class="family-photo"><img src="assets/familia.png" alt="Una madre y dos niños creando flores de limpiapipas juntos" width="1536" height="1024"></figure>
+
+</form>
+</section>
+<section class="screen flow" id="occupation" aria-labelledby="occupation-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:60%"></div></div>
+<h1 class="flow-heading" id="occupation-title" tabindex="-1">¿Cuál es tu ocupación actual?</h1>
+<form id="occupation-form"><fieldset class="age-options"><legend class="sr-only">Selecciona tu ocupación actual</legend>
+<label class="age-option"><input type="radio" name="occupation" value="work" required><span>Solo trabajo</span><b aria-hidden="true">💼</b></label>
+<label class="age-option"><input type="radio" name="occupation" value="study"><span>Solo estudio</span><b aria-hidden="true">📚</b></label>
+<label class="age-option"><input type="radio" name="occupation" value="retired"><span>Soy jubilada</span><b aria-hidden="true">🙏</b></label>
+<label class="age-option"><input type="radio" name="occupation" value="home"><span>Soy ama de casa</span><b aria-hidden="true">🏠</b></label>
+<label class="age-option"><input type="radio" name="occupation" value="work-study"><span>Trabajo y estudio</span><b aria-hidden="true">⚡</b></label>
+</fieldset></form>
+</section>
+<section class="screen flow" id="situation" aria-labelledby="situation-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:80%"></div></div>
+<h1 class="flow-heading" id="situation-title" tabindex="-1">¿En cuál de estas situaciones te encuentras hoy?</h1>
+<form id="situation-form"><fieldset class="age-options situation-options"><legend class="sr-only">Selecciona la situación que mejor te describe</legend>
+<label class="age-option"><input type="radio" name="situation" value="overworked" required><span>Trabajo mucho y gano poco</span><b aria-hidden="true">🥵</b></label>
+<label class="age-option"><input type="radio" name="situation" value="career"><span>Aún no tengo una profesión definida</span><b aria-hidden="true">😫</b></label>
+<label class="age-option"><input type="radio" name="situation" value="freedom"><span>Busco algo que me dé más libertad e ingresos extra</span><b aria-hidden="true">🤑</b></label>
+<label class="age-option"><input type="radio" name="situation" value="change"><span>No estoy satisfecha y quiero un cambio en mi vida</span><b aria-hidden="true">😔</b></label>
+</fieldset></form>
+</section>
+<section class="screen flow" id="experience" aria-labelledby="experience-title" hidden>
+ 
+<div class="track" aria-hidden="true"><div class="fill" style="width:90%"></div></div>
+<h1 class="flow-heading" id="experience-title" tabindex="-1">¿Qué nivel de experiencia tienes creando piezas con limpiapipas?</h1>
+<form id="experience-form"><fieldset class="age-options situation-options"><legend class="sr-only">Selecciona tu nivel de experiencia con limpiapipas</legend>
+<label class="age-option"><input type="radio" name="experience" value="beginner" required><span>Nunca he hecho una pieza con limpiapipas</span></label>
+<label class="age-option"><input type="radio" name="experience" value="tried"><span>Ya intenté hacer algunas piezas, pero no quedaron como quería</span></label>
+<label class="age-option"><input type="radio" name="experience" value="basic"><span>Ya hago piezas sencillas, pero quiero dedicarme a esto profesionalmente</span></label>
+<label class="age-option"><input type="radio" name="experience" value="advanced"><span>Ya tengo experiencia y quiero aprender técnicas avanzadas</span></label>
+</fieldset></form>
+</section>
+<section class="screen flow" id="dream" aria-labelledby="dream-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:95%"></div></div>
+<h1 class="flow-heading" id="dream-title" tabindex="-1">Si ganaras <span>US$3,500 al mes</span> con tu negocio de piezas con limpiapipas…</h1>
+<p class="flow-description">¿Qué sería lo primero que harías con ese dinero?</p>
+<form id="dream-form"><fieldset class="age-options"><legend class="sr-only">Selecciona qué harías primero con esos ingresos hipotéticos</legend>
+<label class="age-option"><input type="radio" name="dream" value="leave-job" required><span>Salir de mi trabajo actual</span></label>
+<label class="age-option"><input type="radio" name="dream" value="workshop"><span>Abrir mi propio taller</span></label>
+<label class="age-option"><input type="radio" name="dream" value="family"><span>Ayudar a mi familia</span></label>
+<label class="age-option"><input type="radio" name="dream" value="personal-dream"><span>Cumplir un sueño que tengo desde hace tiempo</span></label>
+</fieldset></form>
+</section>
+<section class="screen flow" id="life-stage" aria-labelledby="life-stage-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:97%"></div></div>
+<h1 class="flow-heading" id="life-stage-title" tabindex="-1">¿En qué etapa de tu vida sientes que estás ahora?</h1>
+<form id="life-stage-form"><fieldset class="age-options situation-options"><legend class="sr-only">Selecciona la opción que mejor describe esta etapa de tu vida</legend>
+<label class="age-option"><input type="radio" name="lifeStage" value="independence" required><span>Busco independencia financiera</span></label>
+<label class="age-option"><input type="radio" name="lifeStage" value="own-income"><span>Quiero tener mis propios ingresos</span></label>
+<label class="age-option"><input type="radio" name="lifeStage" value="fresh-start"><span>Quiero empezar de nuevo</span></label>
+<label class="age-option"><input type="radio" name="lifeStage" value="freedom"><span>Quiero más libertad financiera</span></label>
+</fieldset></form>
+</section>
+<section class="screen flow" id="content" aria-labelledby="content-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:98%"></div></div>
+<h1 class="flow-heading" id="content-title" tabindex="-1">¿Ya sigues contenido sobre manualidades con limpiapipas?</h1>
+<p class="flow-description">En YouTube, Instagram, TikTok u otras redes.</p>
+<form id="content-form"><fieldset class="age-options"><legend class="sr-only">Selecciona con qué frecuencia ves contenido sobre manualidades con limpiapipas</legend>
+<label class="age-option"><input type="radio" name="content" value="often" required><span>Sí, lo sigo con frecuencia</span></label>
+<label class="age-option"><input type="radio" name="content" value="sometimes"><span>Lo veo de vez en cuando</span></label>
+<label class="age-option"><input type="radio" name="content" value="never"><span>No sigo este tipo de contenido</span></label>
+</fieldset></form>
+</section>
+</main>
+<section class="screen flow result-screen" id="result" aria-labelledby="result-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" id="result-top-fill" style="width:94%"></div></div>
+<div class="result-loading" id="result-loading"><h1 id="result-loading-title">Cargando tus respuestas… ⏳</h1><div class="result-progress-label"><span>¡Creando un entrenamiento exclusivo para ti!</span><span id="result-percent">0%</span></div><div class="result-progress"><div class="result-progress-fill" id="result-progress-fill"></div></div><p>¡Espera solo un momento!</p></div>
+<div class="result-final" id="result-final"><h1 id="result-title">¡Wow! 🫶</h1><p>¡Qué orgullo decir esto: alcanzaste un <strong>94%</strong> de compatibilidad con el perfil ideal para recibir la beca de 6 meses para estudiar en <span>Arte con Limpiapipas!</span> 🎉</p><div class="match-card"><div class="score-ring">94%</div><h2>¡Sí, <span>94%</span>!<br>¡Fuiste increíble! 🥳</h2><p>El mínimo necesario era <strong>87%</strong>, ¡y fuiste mucho más allá!</p></div><h2 class="success-title">¡Tienes todo lo que buscamos!</h2><p class="success-subtitle">Estamos muy felices de verte llegar hasta aquí. 🎉</p><button class="primary claim" id="claim">¡Sí, quiero reclamar mi beca!</button></div>
+</section>
+<section class="screen flow" id="support" aria-labelledby="support-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:99%"></div></div>
+<h1 class="flow-heading" id="support-title" tabindex="-1">Durante el curso, ¿tendrías a alguien que pudiera apoyarte, ya sea <span>emocionalmente o financieramente</span>?</h1>
+<form id="support-form"><fieldset class="age-options"><legend class="sr-only">Selecciona si tendrías apoyo durante el curso</legend>
+<label class="age-option"><input type="radio" name="support" value="yes" required><span>Sí, con certeza</span><b aria-hidden="true">😍</b></label>
+<label class="age-option"><input type="radio" name="support" value="maybe"><span>Tal vez</span><b aria-hidden="true">🤔</b></label>
+<label class="age-option"><input type="radio" name="support" value="no"><span>No</span><b aria-hidden="true">😟</b></label>
+</fieldset></form>
+</section>
+<section class="screen flow" id="course" aria-labelledby="course-title" hidden>
+<div class="track" aria-hidden="true"><div class="fill" style="width:99%"></div></div>
+<h1 class="flow-heading" id="course-title" tabindex="-1">¿Has tomado algún <span>curso en línea</span> antes?</h1>
+<form id="course-form"><fieldset class="age-options"><legend class="sr-only">Selecciona tu experiencia con cursos en línea</legend>
+<label class="age-option"><input type="radio" name="course" value="completed" required><span>Sí, ya hice y completé</span><b aria-hidden="true">💪</b></label>
+<label class="age-option"><input type="radio" name="course" value="started"><span>Ya empecé, pero no terminé</span><b aria-hidden="true">😟</b></label>
+<label class="age-option"><input type="radio" name="course" value="never"><span>Nunca hice</span><b aria-hidden="true">❌</b></label>
+</fieldset></form>
+</section>
+<dialog id="notice" aria-labelledby="notice-title"><h2 id="notice-title">¡Gracias por tu respuesta!</h2><p>La siguiente pregunta estará disponible pronto.</p><form method="dialog"><button class="primary">Regresar</button></form></dialog>
+<script>
+const $ = id => document.getElementById(id);
+const navEntry = performance.getEntriesByType('navigation')[0];
+if(navEntry && navEntry.type === 'reload' && location.hash){history.replaceState(null,'','#welcome');}
+const cards = [...document.querySelectorAll('.selection-card')];
+let loadingFrame = 0;
+let advanceTimer = 0;
+let selectionComplete = false;
+const answers = {age:null,children:null,occupation:null,situation:null,experience:null,dream:null,lifeStage:null,content:null,course:null,support:null};
+let resultFrame = 0;
+function prepareResult(){
+ cancelAnimationFrame(resultFrame);$('result-loading').style.display='block';$('result-final').classList.remove('ready');$('result-progress-fill').style.width='0%';$('result-percent').textContent='0%';
+ const started=performance.now();
+ function tick(now){const pct=Math.min(94,Math.floor((now-started)/42));$('result-progress-fill').style.width=pct+'%';$('result-percent').textContent=pct+'%';document.querySelector('.score-ring').style.setProperty('--score',pct+'%');if(pct<94)resultFrame=requestAnimationFrame(tick);else{$('result-loading').style.display='none';$('result-final').classList.add('ready');}}
+ resultFrame=requestAnimationFrame(tick);
+}
+function updateProgress(percent) {
+ $('percentage').textContent = percent + '%';
+ $('progress-fill').style.width = percent + '%';
+ $('progress').setAttribute('aria-valuenow', String(percent));
+ cards.forEach((card,i) => {if(percent >= [25,60,100][i] && !card.classList.contains('revealed')) {card.classList.add('revealed');card.setAttribute('aria-hidden','false');$('loading-announcement').textContent = card.querySelector('img').alt;}});
+ if(percent === 100) {selectionComplete=true;$('selection-result').classList.add('ready');$('selection-result').setAttribute('aria-hidden','false');$('loading-announcement').textContent='Todo listo. Pulsa continuar.';clearTimeout(advanceTimer);}
+}
+function prepareSelection() {
+ if(selectionComplete){updateProgress(100);return;}
+ $('selection-result').classList.remove('ready');$('selection-result').setAttribute('aria-hidden','true');
+ cards.forEach(card => {card.classList.remove('revealed');card.setAttribute('aria-hidden','true');});
+ $('loading-announcement').textContent='';updateProgress(0);
+ const started = performance.now();
+ function tick(now){const percent=Math.min(100,Math.floor((now-started)/54));updateProgress(percent);if(percent<100)loadingFrame=requestAnimationFrame(tick);}
+ loadingFrame=requestAnimationFrame(tick);
+}
+function renderRoute(){
+ clearTimeout(advanceTimer);
+ cancelAnimationFrame(loadingFrame);
+ const route=location.hash === '#vls' ? 'vls' : location.hash === '#video' ? 'video' : location.hash === '#perfil' ? 'profile' : location.hash === '#resultado' ? 'result' : location.hash === '#apoyo' ? 'support' : location.hash === '#curso' ? 'course' : location.hash === '#contenido' ? 'content' : location.hash === '#etapa' ? 'life-stage' : location.hash === '#suenos' ? 'dream' : location.hash === '#experiencia' ? 'experience' : location.hash === '#situacion' ? 'situation' : location.hash === '#ocupacion' ? 'occupation' : location.hash === '#hijos' ? 'family' : location.hash === '#edad' ? 'age' : location.hash === '#seleccion' ? 'selection' : 'welcome';
+ ['welcome','selection','age','family','occupation','situation','experience','dream','life-stage','content','course','support','result','profile','video','vls'].forEach(id => {$(id).hidden=id!==route;});
+ window.scrollTo(0,0);
+ if(route==='selection'){prepareSelection();$('selection-title').focus({preventScroll:true});}
+ if(route==='age')$('age-title').focus({preventScroll:true});
+ if(route==='family')$('family-title').focus({preventScroll:true});
+ if(route==='occupation')$('occupation-title').focus({preventScroll:true});
+ if(route==='situation')$('situation-title').focus({preventScroll:true});
+ if(route==='experience')$('experience-title').focus({preventScroll:true});
+ if(route==='dream')$('dream-title').focus({preventScroll:true});
+ if(route==='life-stage')$('life-stage-title').focus({preventScroll:true});
+ if(route==='content')$('content-title').focus({preventScroll:true});
+ if(route==='course')$('course-title').focus({preventScroll:true});
+ if(route==='support')$('support-title').focus({preventScroll:true});
+ if(route==='result')prepareResult();
+ if(route==='profile')$('profile-title').focus({preventScroll:true});
+ if(route==='video')$('video-title').focus({preventScroll:true});
+ if(route==='vls')$('vls-title').focus({preventScroll:true});
+}
+$('start').addEventListener('click',()=>{selectionComplete=false;location.hash='seleccion';});
+$('continue-selection').addEventListener('click',()=>{location.hash='edad';});
+const singleChoiceSteps = [
+ {form:'age-form',key:'age',next:'hijos'},
+ {form:'family-form',key:'children',next:'ocupacion'},
+ {form:'occupation-form',key:'occupation',next:'situacion'},
+ {form:'situation-form',key:'situation',next:'experiencia'},
+ {form:'experience-form',key:'experience',next:'suenos'},
+ {form:'dream-form',key:'dream',next:'etapa'},
+ {form:'life-stage-form',key:'lifeStage',next:'contenido'},
+ {form:'content-form',key:'content',next:'curso'},
+ {form:'course-form',key:'course',next:'apoyo'},
+ {form:'support-form',key:'support',next:'resultado'}
+];
+singleChoiceSteps.forEach(step=>{
+ const form=$(step.form);
+ function selectAnswer(event){
+  const input=event.target;
+  if(input.type!=='radio'||input.name!==step.key||!input.checked)return;
+  answers[step.key]=input.value;
+  clearTimeout(advanceTimer);
+  advanceTimer=setTimeout(()=>{
+   if(form.closest('section').hidden)return;
+   if(step.next){location.hash=step.next;}else{$('notice').showModal();}
+  },180);
+ }
+ form.addEventListener('change',selectAnswer);
+ // A repeated click on the selected answer also advances after returning.
+ form.addEventListener('click',selectAnswer);
+ form.addEventListener('submit',event=>{event.preventDefault();});
+});
+window.addEventListener('hashchange',renderRoute);
+$('claim').addEventListener('click',()=>{location.hash='perfil';});
+$('activate').addEventListener('click',()=>{location.hash='video';});
+$('watch-video').addEventListener('click',()=>{location.hash='vls';});
+const vlsAudio=document.querySelector('.vls-audio');
+if(vlsAudio){vlsAudio.addEventListener('loadedmetadata',()=>{vlsAudio.currentTime=14;},{once:true});}
+renderRoute();
+</script>
+</body>
+</html>
