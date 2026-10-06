@@ -30,7 +30,7 @@ dialog{border:1px solid var(--line);border-radius:18px;padding:30px 24px;backgro
 <style>.profile-photo{width:100%;aspect-ratio:1.55;overflow:hidden;border-radius:18px;margin:24px 0 10px}.profile-photo img{width:100%;height:100%;object-fit:cover;object-position:center}.profile-note{background:#fff5f0;border:1px solid #ffc8b5;border-radius:16px;padding:14px 16px;font-size:14px;line-height:1.45}.profile-note strong{color:#12a64d}.profile .success-title{margin-top:20px}</style>
 <style>.profile-photo{aspect-ratio:1.12}.profile-photo img{object-position:center top}</style>
 <style>.video-note{margin-top:22px;background:#e9f8ed;border:1px solid #9be5ae;border-radius:16px;padding:14px 16px;font-size:15px;line-height:1.45}.video-warning{margin-top:22px;background:#fff0e9;border:1px solid #ffc0ad;border-radius:16px;padding:18px 16px}.warning-icon{font-size:26px}.video-warning h2{color:#e22d32;font-size:29px;margin:7px 0 15px}.video-warning p{font-size:14px;line-height:1.45;margin:8px 0}.video-warning p b{background:#e22d32;color:#fff;padding:2px 5px}.video-warning u{font-weight:800}</style>
-<style>.vls-player{position:relative;width:100%;aspect-ratio:9/14;max-height:650px;overflow:hidden;border-radius:18px;background:#292434;margin:10px auto 0}.vls-player img{width:100%;height:100%;object-fit:cover;object-position:center}.vls-overlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 18px;border-radius:10px;background:#7443c4e8;color:#fff;min-width:140px}.vls-overlay span{font-size:12px}.vls-overlay strong{font-size:28px}.vls-overlay small{font-size:11px}.vls-caption{position:absolute;left:18px;right:18px;bottom:20px;color:#fff;font-size:15px;font-weight:700;text-shadow:0 2px 4px #000}.vls-play{position:absolute;right:14px;bottom:14px;width:42px;height:42px;min-height:42px;border:1px solid #ffffff80;border-radius:50%;background:#292434b8;color:#fff}</style>
+<style>.vls-player{position:relative;width:100%;aspect-ratio:9/14;max-height:650px;overflow:hidden;border-radius:18px;background:#292434;margin:10px auto 0}.vls-video{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.vls-caption{position:absolute;left:18px;right:18px;bottom:58px;color:#fff;font-size:15px;font-weight:700;text-shadow:0 2px 4px #000;pointer-events:none}</style>
 <style>.secure-footer-image{display:block;width:100%;max-width:420px;height:auto;margin:24px auto 0;border-radius:12px}</style>
 <style>.vls-audio{display:block;width:100%;margin:14px auto 0;accent-color:var(--accent)}.vls-audio::-webkit-media-controls-panel{background:#f3eefb}</style>
 </head>
@@ -42,8 +42,7 @@ dialog{border:1px solid var(--line);border-radius:18px;padding:30px 24px;backgro
 <section class="screen flow vls-screen" id="vls" aria-labelledby="vls-title" hidden>
 <div class="track" aria-hidden="true"><div class="fill" style="width:99%"></div></div>
 <h1 class="sr-only" id="vls-title">Video de presentación de la beca</h1>
-<div class="vls-player"><img src="assets/valeria.png" alt="Video de la profesora de arte con limpiapipas" width="1536" height="1024"><div class="vls-overlay"><span>Tu video está listo</span><strong>🔊</strong><small>Toca para escuchar</small></div><div class="vls-caption">Descubre tu beca de estudios de 6 meses</div><button class="vls-play" aria-label="Reproducir video">▶</button></div>
-<audio class="vls-audio" controls preload="metadata" aria-label="Narración de la VLS"><source src="assets/vls-narracao.mp3" type="audio/mpeg">Tu navegador no soporta audio.</audio>
+<div class="vls-player"><video class="vls-video" controls playsinline preload="metadata" poster="assets/valeria.png" aria-label="Video de presentación de Arte que Rinde"><source src="assets/hilo.mp4" type="video/mp4">Tu navegador no soporta video.</video><div class="vls-caption">Descubre Arte que Rinde</div></div>
 <img class="secure-footer-image" src="assets/secure-footer.png" alt="Sitio seguro y términos de uso" width="691" height="353">
 </section>
 <section class="screen flow result-screen" id="profile" aria-labelledby="profile-title" hidden>
@@ -271,8 +270,8 @@ window.addEventListener('hashchange',renderRoute);
 $('claim').addEventListener('click',()=>{location.hash='perfil';});
 $('activate').addEventListener('click',()=>{location.hash='video';});
 $('watch-video').addEventListener('click',()=>{location.hash='vls';});
-const vlsAudio=document.querySelector('.vls-audio');
-if(vlsAudio){vlsAudio.addEventListener('loadedmetadata',()=>{vlsAudio.currentTime=14;},{once:true});}
+const vlsVideo=document.querySelector('.vls-video');
+if(vlsVideo){window.addEventListener('hashchange',()=>{if(location.hash!=='#vls')vlsVideo.pause();});}
 renderRoute();
 </script>
 </body>
